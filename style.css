@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-size: 300px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 100px;
+}
+
+.rest:hover {
+    box-shadow: 0px 0px 70px 1px deeppink;
+    animation: rotation-clockwise 1s ease-in forwards;
+}
+
+@keyframes rotation-clockwise {
+    0%   {rotate: 0deg;}
+    10%  {rotate: 10deg;}
+    20%  {rotate: 20deg;}
+    30%  {rotate: 30deg;}
+    40%  {rotate: 40deg;}
+    50%  {rotate: 45deg;}
+    60%  {rotate: 40deg;}
+    70%  {rotate: 30deg;}
+    80%  {rotate: 20deg;}
+    90%  {rotate: 10deg;}
+    100% {rotate: 0deg;}
+}
