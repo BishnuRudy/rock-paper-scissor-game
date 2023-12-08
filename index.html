@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -17,18 +16,20 @@
         </h1>
     </header>
     <main>
+        <div class="score">
+            <h2 class="score-label">Score</h2>
+            <div class="human-score"><h3></h3></div>
+            <div class="computer-score"><h3></h3></div>
+        </div>
         <div class="players">
             <div class="human">
                 <p>You</p>
+                <img class="rest" src="./images/rest.png" alt="rest-hand">
             </div>
             <div class="computer">
                 <p>Computer</p>
+                <img class="rest" src="./images/rest.png" alt="rest-hand">
             </div>
-        </div>
-        <div class="weapons">
-            <button id="rock"><i class="far fa-hand-rock"></i></button>
-            <button id="paper"><i class="far fa-hand-paper"></i></button>
-            <button id="scissor"><i class="far fa-hand-scissors"></i></button>
         </div>
     </main>
     <script src="script.js"></script>
