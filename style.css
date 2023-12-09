@@ -35,20 +35,8 @@ header > h1 {
     1px -5px 0 brown;
 }
 
-.rock-title {
-    color: red;
-}
-
-.paper-title {
-    color: orange;
-}
-
-.scissor-title {
-    color: coral;
-}
-
-.titles:hover {
-    color: #fff;
+.titles {
+    color: whitesmoke;
 }
 
 main {
