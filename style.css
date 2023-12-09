@@ -52,7 +52,7 @@ header > h1 {
 }
 
 main {
-    margin: 10% auto;
+    margin: 5% auto;
     width: 80vw;
     display: flex;
     flex-direction: column;
@@ -98,6 +98,11 @@ button:hover {
     background-color: #2980b9;
     cursor: pointer;
     color: tomato;
+}
+
+.win-message {
+    font-size: 30px;
+    background-color: tomato;
 }
 
 .rest {
