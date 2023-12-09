@@ -54,6 +54,7 @@ function determineWinner(playerChoice, AIChoice) {
 
 function handleWeaponAnimationState(playerWeapon, AIWeapon) {
     setTimeout( () => {
+        playerWeapon.disabled = true;
         elements.playerWeaponImage.classList.toggle("rest");
         elements.AIWeaponImage.classList.toggle("rest");
 
@@ -65,8 +66,9 @@ function handleWeaponAnimationState(playerWeapon, AIWeapon) {
     setTimeout( () => {
         elements.playerWeaponImage.classList.toggle("rest");
         elements.AIWeaponImage.classList.toggle("rest");
-        elements.playerWeaponImage.src = weaponImages["rest"]        
-        elements.AIWeaponImage.src = weaponImages["rest"]   
+        elements.playerWeaponImage.src = weaponImages["rest"];        
+        elements.AIWeaponImage.src = weaponImages["rest"];   
+        playerWeapon.disabled = false;
     }, 1500 )
 }
 
