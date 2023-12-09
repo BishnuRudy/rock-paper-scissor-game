@@ -15,18 +15,16 @@ const weaponImages = {
     "scissor" : "./images/scissors.png"
 }
 
-function headerGlowAnimation() {
-    setInterval(() => {
-        for (const elem of elements.headerText) {
-            elem.style.textShadow = 
-                `
-                    5px 0 10px ${generateRandomColor()},
-                    -5px 0 10px ${generateRandomColor()},
-                    4px 4px 10px ${generateRandomColor()},
-                    1px -5px 0 ${generateRandomColor()}
-                `
-        }
-    }, 500);
+function headerGlowAnimation() { 
+    for (const elem of elements.headerText) {
+        elem.style.textShadow = 
+            `
+                5px 0 10px ${generateRandomColor()},
+                -5px 0 10px ${generateRandomColor()},
+                4px 4px 10px ${generateRandomColor()},
+                1px -5px 0 ${generateRandomColor()}
+            `
+    }
 }
 
 function AIWeaponChoice() {
@@ -98,6 +96,7 @@ function generateRandomColor() {
     return colorCode;
 }
 
+setInterval(headerGlowAnimation, 200);
 for (let i = 0; i < elements.weapons.children.length; i++) {
     const weapon = elements.weapons.children[i];
     weapon.addEventListener('click', (e) => {
