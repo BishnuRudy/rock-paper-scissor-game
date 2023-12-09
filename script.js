@@ -38,6 +38,24 @@ function determineWinner(playerChoice, AIChoice) {
     displayWinMessage(winnerResult);
 }
 
+function handleWeaponAnimationState(playerWeapon, AIWeapon) {
+    setTimeout( () => {
+        elements.playerWeaponImage.classList.toggle("rest");
+        elements.AIWeaponImage.classList.toggle("rest");
+
+        elements.playerWeaponImage.src = 
+            weaponImages[playerWeapon.textContent.toLocaleLowerCase()];
+        elements.AIWeaponImage.src = weaponImages[AIWeapon]
+    } , 200 )
+
+    setTimeout( () => {
+        elements.playerWeaponImage.classList.toggle("rest");
+        elements.AIWeaponImage.classList.toggle("rest");
+        elements.playerWeaponImage.src = weaponImages["rest"]        
+        elements.AIWeaponImage.src = weaponImages["rest"]   
+    }, 1500 )
+}
+
 function displayWinMessage(winner) {
     let msg;
     if (winner == 1)
@@ -59,24 +77,7 @@ for (let i = 0; i < elements.weapons.children.length; i++) {
         const AIweaponName = 
             elements.weapons.children[AIWeapon].textContent.toLocaleLowerCase()
 
-        setTimeout( () => {
-            elements.playerWeaponImage.classList.toggle("rest");
-            elements.AIWeaponImage.classList.toggle("rest");
-
-            elements.playerWeaponImage.src = 
-                weaponImages[weapon.textContent.toLocaleLowerCase()];
-            elements.AIWeaponImage.src = weaponImages[AIweaponName]
-                
-
-        } , 200 )
-
-        setTimeout( () => {
-            elements.playerWeaponImage.classList.toggle("rest");
-            elements.AIWeaponImage.classList.toggle("rest");
-            elements.playerWeaponImage.src = weaponImages["rest"]        
-            elements.AIWeaponImage.src = weaponImages["rest"]   
-        }, 1500 )
-
+        handleWeaponAnimationState(weapon, AIweaponName)
         determineWinner(i, AIWeapon)
     })
 }
