@@ -1,5 +1,5 @@
 const elements = {
-    header            : document.querySelector("header"),
+    headerText        : document.querySelectorAll(".titles"),
     playerScore       : document.querySelector(".human-score"),
     computerScore     : document.querySelector(".computer-score"),
     playerWeaponImage : document.querySelector(".human > .rest"),
@@ -13,6 +13,20 @@ const weaponImages = {
     "rock"    : "./images/rock.png",
     "paper"   : "./images/paper.png",
     "scissor" : "./images/scissors.png"
+}
+
+function headerGlowAnimation() {
+    setInterval(() => {
+        for (const elem of elements.headerText) {
+            elem.style.textShadow = 
+                `
+                    5px 0 10px ${generateRandomColor()},
+                    -5px 0 10px ${generateRandomColor()},
+                    4px 4px 10px ${generateRandomColor()},
+                    1px -5px 0 ${generateRandomColor()}
+                `
+        }
+    }, 500);
 }
 
 function AIWeaponChoice() {
@@ -68,6 +82,15 @@ function displayWinMessage(winner) {
     setTimeout( () => {
         elements.winMessageField.textContent = "";
     }, 1500 )
+}
+
+function generateRandomColor() {
+    const hexcodes = "0123456789ABCDEF".split('');
+    let colorCode = "#";
+    for (let i = 0; i < 6; i++) {
+        colorCode += hexcodes[Math.floor(Math.random() * hexcodes.length)];
+    }
+    return colorCode;
 }
 
 for (let i = 0; i < elements.weapons.children.length; i++) {
