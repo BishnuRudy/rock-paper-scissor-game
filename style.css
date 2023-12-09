@@ -10,6 +10,7 @@ img {
     height: 200px;
     border: 10px solid white;
     border-radius: 100px;
+    box-shadow: 0px 0px 70px 1px deeppink;
 }
 
 body {
@@ -100,7 +101,6 @@ button:hover {
 }
 
 .rest {
-    box-shadow: 0px 0px 70px 1px deeppink;
     animation: rotation-clockwise 1s ease-in infinite;
 }
 
