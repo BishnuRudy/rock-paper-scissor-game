@@ -44,12 +44,15 @@ function increaseAIScore() {
 }
 
 function determineWinner(playerChoice, AIChoice) {
-    const winnerResult = (3 + playerChoice - AIChoice) % 3;
-    if (winnerResult === 2)
-        increaseAIScore();
-    else if (winnerResult === 1)
-        increasePlayerScore();
-    displayWinMessage(winnerResult);
+    setTimeout(() => {
+        const winnerResult = (3 + playerChoice - AIChoice) % 3;
+        if (winnerResult === 2)
+            increaseAIScore();
+        else if (winnerResult === 1)
+            increasePlayerScore();
+        displayWinMessage(winnerResult);
+    }, 200);
+    
 }
 
 function handleWeaponAnimationState(playerWeapon, AIWeapon) {
