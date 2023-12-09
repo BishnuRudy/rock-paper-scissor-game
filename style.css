@@ -113,17 +113,44 @@ button:hover {
 .rest {
     animation: rotation-clockwise 1s ease-in infinite;
 }
+@-webkit-keyframes rotation-clockwise { /* Chrome, Safari, Opera */
+    0%   {-webkit-transform: rotate(0deg);}
+    10%  {-webkit-transform: rotate(10deg);}
+    20%  {-webkit-transform: rotate(20deg);}
+    30%  {-webkit-transform: rotate(30deg);}
+    40%  {-webkit-transform: rotate(40deg);}
+    50%  {-webkit-transform: rotate(45deg);}
+    60%  {-webkit-transform: rotate(40deg);}
+    70%  {-webkit-transform: rotate(30deg);}
+    80%  {-webkit-transform: rotate(20deg);}
+    90%  {-webkit-transform: rotate(10deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
 
-@keyframes rotation-clockwise {
-    0%   {rotate: 0deg;}
-    10%  {rotate: 10deg;}
-    20%  {rotate: 20deg;}
-    30%  {rotate: 30deg;}
-    40%  {rotate: 40deg;}
-    50%  {rotate: 45deg;}
-    60%  {rotate: 40deg;}
-    70%  {rotate: 30deg;}
-    80%  {rotate: 20deg;}
-    90%  {rotate: 10deg;}
-    100% {rotate: 0deg;}
+@-moz-keyframes rotation-clockwise { /* Firefox */
+    0%   {-moz-transform: rotate(0deg);}
+    10%  {-moz-transform: rotate(10deg);}
+    20%  {-moz-transform: rotate(20deg);}
+    30%  {-moz-transform: rotate(30deg);}
+    40%  {-moz-transform: rotate(40deg);}
+    50%  {-moz-transform: rotate(45deg);}
+    60%  {-moz-transform: rotate(40deg);}
+    70%  {-moz-transform: rotate(30deg);}
+    80%  {-moz-transform: rotate(20deg);}
+    90%  {-moz-transform: rotate(10deg);}
+    100% {-moz-transform: rotate(0deg);}
+}
+
+@keyframes rotation-clockwise { /* Standard syntax */
+    0%   {transform: rotate(0deg);}
+    10%  {transform: rotate(10deg);}
+    20%  {transform: rotate(20deg);}
+    30%  {transform: rotate(30deg);}
+    40%  {transform: rotate(40deg);}
+    50%  {transform: rotate(45deg);}
+    60%  {transform: rotate(40deg);}
+    70%  {transform: rotate(30deg);}
+    80%  {transform: rotate(20deg);}
+    90%  {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
 }
