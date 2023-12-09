@@ -10,16 +10,16 @@
 <body>
     <header>
         <h1>
-            <span class="rock-title">Rock</span>
-            <span class="paper-title">Paper</span>
-            <span class="scissor-title">Scissor</span>
+            <span class="titles rock-title">Rock</span>
+            <span class="titles paper-title">Paper</span>
+            <span class="titles scissor-title">Scissor</span>
         </h1>
     </header>
     <main>
+        <h2 class="score-label">Score</h2>
         <div class="score">
-            <h2 class="score-label">Score</h2>
-            <div class="human-score"><h3></h3></div>
-            <div class="computer-score"><h3></h3></div>
+            <div class="human-score">0<h3></h3></div>
+            <div class="computer-score">0<h3></h3></div>
         </div>
         <div class="players">
             <div class="human">
@@ -30,6 +30,11 @@
                 <p>Computer</p>
                 <img class="rest" src="./images/rest.png" alt="rest-hand">
             </div>
+        </div>
+        <div class="weapons">
+            <button>Rock</button>
+            <button>Paper</button>
+            <button>Scissor</button>
         </div>
     </main>
     <script src="script.js"></script>
